@@ -1,0 +1,19 @@
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Picture</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for author in authors %}
+            <tr>
+                <td>{{ author.authorName }}</td>
+                <td>{{ author.email }}</td>
+                <td><img src="{{ asset('images/' ~ author.picture) }}" alt="{{ author.authorName }}" width="100"></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
